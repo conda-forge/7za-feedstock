@@ -1,5 +1,5 @@
 {% set name = "7za" %}
-{% set version = "9.20" %}
+{% set version = "19.00" %}
 {% set version_nodot = version.replace(".", "") %}
 
 package:
@@ -7,9 +7,9 @@ package:
   version: {{ version }}
 
 source:
-  fn: 7za{{ version_nodot }}.zip
-  url: https://sourceforge.net/projects/sevenzip/files/7-Zip/{{ version }}/7za{{ version_nodot }}.zip/download
-  sha256: 2a3afe19c180f8373fa02ff00254d5394fec0349f5804e0ad2f6067854ff28ac
+  fn: 7z-extra.7z
+  url: https://www.7-zip.org/a/7z{{ version_nodot }}-extra.7z
+  sha256: af6eca1c8578df776189ee7785ab5d21525e42590f788c4e82e961a36c3a5306
 
 build:
   number: 0
@@ -17,7 +17,7 @@ build:
 
 requirements:
   build:
-    - bzip2
+    - 7za
 
 test:
   commands:
@@ -31,5 +31,6 @@ about:
   summary: 'A file archiver with a high compression ratio'
 
 extra:
+  final: true
   recipe-maintainers:
     - scopatz
