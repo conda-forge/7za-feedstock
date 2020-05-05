@@ -31,6 +31,5 @@ about:
   summary: 'A file archiver with a high compression ratio'
 
 extra:
-  final: true
   recipe-maintainers:
     - scopatz
